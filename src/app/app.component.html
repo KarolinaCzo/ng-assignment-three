@@ -1,0 +1,21 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <button type="button" class="btn btn-dark" (click)="onShowParagraph()" (click)="onClick()">Display details</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p>Number of button clicks:
+          <span class="number" [ngStyle]="{backgroundColor: getColor()}" [ngClass]="{whiteText: numberOfClicks >= 5}">{{ numberOfClicks }}</span>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <p *ngIf="showParagraph">Change will not come from comfort.</p>
+      </div>
+    </div>
+  </div>
+</div>
